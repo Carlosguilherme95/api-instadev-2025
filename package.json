@@ -1,18 +1,32 @@
 {
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "sequelize": "^6.37.6",
-    "yarn": "^1.22.22"
+  "name": "apinova",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Carlosguilherme95/api-instadev-2025#readme",
+  "bugs": {
+    "url": "https://github.com/Carlosguilherme95/api-instadev-2025/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carlosguilherme95/api-instadev-2025.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "express": "^4.21.2",
+    "mysql2": "^3.13.0",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.21",
+    "typescript": "^5.8.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "eslint": "^9.22.0",
-    "globals": "^16.0.0",
-    "nodemon": "^3.1.9",
-    "sequelize-cli": "^6.6.2"
+    "nodemon": "^3.1.9"
   }
 }
