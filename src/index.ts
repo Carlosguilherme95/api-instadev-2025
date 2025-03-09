@@ -1,6 +1,7 @@
 import "reflect-metadata";
 import { AppDataSource } from "./data-source/database-conection";
-import express from "express";
+import express, { Router } from "express";
+import { routes } from "./routes/routes";
 export const app = express();
 
 const port = 3000;
@@ -18,6 +19,7 @@ async function connect() {
 
 connect();
 
+app.use("/instadev", routes);
 app.listen(port, () => {
   console.log(`Express rodando na porta ${port}`);
 });
