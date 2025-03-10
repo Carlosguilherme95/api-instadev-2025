@@ -1,8 +1,7 @@
-import { DataSource } from "typeorm";
-import { createUser } from "../model/users";
 import { Request, Response } from "express";
 import { AppDataSource } from "../data-source/database-conection";
 import { User } from "../entity/entity";
+import { createUser } from "../model/users";
 
 export class UserController {
   async userCreate(req: Request, res: Response) {
@@ -18,9 +17,11 @@ export class UserController {
         gender,
         password_hash
       );
-      res.status(201).send("user created");
+      res.status(201).send("usuário criado com sucesso");
     } catch (Error) {
-      res.send(404).send("erro");
+      res
+        .status(404)
+        .send("não foi possível criar o usuário email ou usuário já utilizado");
     }
   }
   async userGetAll(req: Request, res: Response) {

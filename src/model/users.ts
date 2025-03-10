@@ -1,4 +1,3 @@
-import { DataSource } from "typeorm";
 import { User } from "../entity/entity";
 import { AppDataSource } from "../data-source/database-conection";
 
@@ -11,6 +10,8 @@ export async function createUser(
   gender: string,
   password_hash: string
 ) {
+  userExist(email, user_name);
+
   const newUser = new User();
   newUser.name = name;
   newUser.user_name = user_name;
@@ -22,4 +23,14 @@ export async function createUser(
 
   const dataSource = AppDataSource.getRepository(User);
   await dataSource.save(newUser);
+}
+
+export async function userExist(email: string, user_name: string) {
+  const dataSource = AppDataSource.getRepository(User);
+  const user = await dataSource.findOne({
+    where: { email: email, user_name: user_name },
+  });
+  if (user) {
+    console.log("Usuário já existe");
+  }
 }
