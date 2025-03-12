@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                    // Compilar para ES6
+    "module": "commonjs",                // Usar o sistema de módulos CommonJS
+    "moduleResolution": "node",          // Resolver os módulos de maneira compatível com o Node.js
+    "experimentalDecorators": true,      // Habilitar o uso de decoradores (necessário para o TypeORM)
+    "emitDecoratorMetadata": true,       // Habilitar a emissão de metadados para decoradores
+    "esModuleInterop": true,             // Permitir a importação de módulos CommonJS
+    "skipLibCheck": true,                // Ignorar verificações de tipo em arquivos de definição de tipo
+    "strict": true,                      // Habilitar todas as verificações estritas de tipos
+    "forceConsistentCasingInFileNames": true, // Garantir que o casing (maiúsculas/minúsculas) dos arquivos seja consistente
+    "outDir": "./dist",                  // Diretório de saída para os arquivos compilados
+    "baseUrl": ".",                      // Base para resolução de módulos
+    "paths": {
+      "*": ["node_modules/*", "src/*"]   // Caminho para encontrar módulos
+    }
+  },
+  "include": [
+    "src/**/*.ts"                         // Incluir todos os arquivos TypeScript na pasta src
+  ],
+  "exclude": [
+    "node_modules",                       // Excluir a pasta node_modules
+    "dist"                                // Excluir a pasta dist (onde os arquivos compilados vão)
+  ]
+}
