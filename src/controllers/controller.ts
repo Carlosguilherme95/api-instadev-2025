@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { AppDataSource } from "../data-source/database-conection";
 import { User } from "../entity/entity";
+import { AppDataSource } from "../data-source/data-source";
 import { createUser } from "../model/users";
 
 export class UserController {

@@ -1,5 +1,5 @@
 import { User } from "../entity/entity";
-import { AppDataSource } from "../data-source/database-conection";
+import { AppDataSource } from "../data-source/data-source";
 
 export async function createUser(
   name: string,
